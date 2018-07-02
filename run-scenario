@@ -1,0 +1,6 @@
+if [ $# -eq 0 ] ; then
+    echo 'usage: run-scenario <full-path-to-scenario>'
+    exit 1
+fi
+
+mvn gatling:execute -Dgatling.simulationClass=$1
